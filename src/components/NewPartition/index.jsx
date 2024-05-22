@@ -1,20 +1,7 @@
 import React, { useState } from "react";
 import { ResizableBox } from "react-resizable";
-import { SplitButton } from "./action/SplitButton";
-import getRandomColor from "../utills/getRandomColor";
-
-const PartitionContent = ({ color, onSplit, onRemove }) => (
-  <div
-    className="absolute inset-0 flex items-center justify-center"
-    style={{ backgroundColor: color }}
-  >
-    <SplitButton direction="V" onClick={onSplit} />
-    <SplitButton direction="H" onClick={onSplit} />
-    <button onClick={onRemove} className="bg-white p-4 w-[3.75rem]">
-      -
-    </button>
-  </div>
-);
+import getRandomColor from "../../utills/getRandomColor";
+import { PartitionContent } from "../PartitionContent";
 
 const PartitionNew = ({
   id,
@@ -73,7 +60,6 @@ const PartitionNew = ({
         onSplit={handleSplit}
         onRemove={() => onRemove(id)}
       />
-      {/* <HoverOverlay isVisible={isHover} /> */}
     </ResizableBox>
   );
 };

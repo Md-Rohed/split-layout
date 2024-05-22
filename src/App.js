@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "react-resizable/css/styles.css";
 import getRandomColor from "./utills/getRandomColor";
-import PartitionNew from "./components/new";
+import PartitionNew from "./components/NewPartition";
 
 const App = () => {
   const [partitions, setPartitions] = useState([
